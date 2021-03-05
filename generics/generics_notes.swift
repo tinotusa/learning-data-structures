@@ -64,6 +64,9 @@ var intValue: Any = 1
 var stringValue: Any = "test"
 swapAny(&intValue, &stringValue)
 
+// generics can also be given constraints to make the type have certain attributes
+// e.g make sure that a type T is equatable so that the == operator can be used
+
 // syntax for a generic class
 /*
 class Test<T> {
