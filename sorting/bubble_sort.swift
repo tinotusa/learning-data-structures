@@ -28,23 +28,3 @@ var list = [1, 3, 4, 1, -2, 5, 98]
 print(list)
 bubbleSort(&list)
 print(list)
-
-
-var ordinals = [
-    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
-]
-
-var listStrings = list.map { (value) -> String in 
-    var value = value
-    if value < 0 { value = -value }
-    var text = ""
-    while value > 0 {
-        text = text + ordinals[value % 10]
-        value /= 10
-    }
-    return text
-}
-
-print(listStrings)
-bubbleSort(&listStrings)
-print(listStrings)
