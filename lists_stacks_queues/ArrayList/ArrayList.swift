@@ -34,7 +34,11 @@ extension ArrayList: Sequence {
     struct ListIterator: IteratorProtocol {
         let list: ArrayList
         var index = 0
-
+        var current: Node<Element>? = nil
+        init (_ list: ArrayList) {
+            self.list = list
+            current = list.first
+        }
         init(_ list: ArrayList) {
             self.list = list
         }
